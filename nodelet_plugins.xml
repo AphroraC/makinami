@@ -1,0 +1,3 @@
+<library path="lib/libmakinami_nodelet">
+  <class name="makinami/MakinamiNodelet" type="makinami::MakinamiNodelet" base_class_type="nodelet::Nodelet" />
+</library>

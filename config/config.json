@@ -1,0 +1,43 @@
+{
+  "num_threads": 4,
+  "sync_queue_size": 10,
+  "sync_tolerance_nanosecond": 100000000,
+  "sync_policy_approx": true,
+  "output_params": {
+    "topic": "/livox/points",
+    "frame_id": "livox_frame"
+  },
+  "lidar_params": [
+    {
+      "name": "master_lidar",
+      "topic": "/livox/lidar/192_168_100_3",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "slave_lidar",
+      "topic": "/livox/lidar/192_168_100_4",
+      "enabled": true,
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="nodelet_manager" default="makinami_nodelet_manager" />
+  <arg name="config_file" default="$(find makinami)/config/config.json" />
+
+  <node pkg="nodelet" type="nodelet" name="$(arg nodelet_manager)" args="manager" output="screen"/>
+  <node pkg="nodelet" type="nodelet" name="makinami_nodelet" args="load makinami/MakinamiNodelet $(arg nodelet_manager)">
+    <param name="config_file" value="$(arg config_file)" />
+  </node>
+</launch>
