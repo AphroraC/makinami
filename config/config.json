@@ -1,8 +1,9 @@
 {
-  "num_threads": 4,
+  "num_threads": 2,
   "sync_queue_size": 10,
   "sync_tolerance_nanosecond": 100000000,
   "sync_policy_approx": true,
+  "livox_custom_msg": false,
   "output_params": {
     "topic": "/livox/points",
     "frame_id": "livox_frame"
@@ -10,13 +11,20 @@
   "lidar_params": [
     {
       "name": "master_lidar",
-      "topic": "/livox/lidar/192_168_100_3",
-      "translation": [
+      "topic": "/livox/lidar_192_168_100_3",
+      "matrix": [
+        1.0,
         0.0,
         0.0,
-        0.0
-      ],
-      "rotation": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
         0.0,
         0.0,
         0.0,
@@ -25,18 +33,24 @@
     },
     {
       "name": "slave_lidar",
-      "topic": "/livox/lidar/192_168_100_4",
-      "enabled": true,
-      "translation": [
-        0.0,
-        0.0,
-        0.0
-      ],
-      "rotation": [
-        0.0,
-        0.0,
-        0.0,
-        1.0
+      "topic": "/livox/lidar_192_168_100_5",
+      "matrix": [
+        1.000,
+        -0.010,
+        0.029,
+        -0.022,
+        -0.026,
+        0.195,
+        0.981,
+        0.124,
+        -0.016,
+        -0.981,
+        0.194,
+        -0.200,
+        0.000,
+        0.000,
+        0.000,
+        1.000
       ]
     }
   ]

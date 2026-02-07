@@ -9,6 +9,8 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   pcl_ros
   std_msgs
+  sensor_msgs
+  message_filters
 )
 
 find_package(Boost REQUIRED)

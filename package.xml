@@ -12,6 +12,8 @@
   <depend>roscpp</depend>
   <depend>pcl_ros</depend>
   <depend>std_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>message_filters</depend>
   <depend>nodelet</depend>
   <depend>actionlib</depend>
   <depend>actionlib_msgs</depend>
