@@ -29,9 +29,10 @@ public:
   ConfigServer() = default;
   ~ConfigServer() = default;
   void initializeParameters(const std::string &config_file) {
-    std::ifstream file(config_file);
-    json data = json::parse(file);
     try {
+      std::ifstream file(config_file);
+      json data = json::parse(file, nullptr, true, true);
+
       num_threads = data["num_threads"];
       sync_queue_size = data["sync_queue_size"];
       sync_tolerance_nanosecond = data["sync_tolerance_nanosecond"];
